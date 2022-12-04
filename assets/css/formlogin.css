@@ -1,0 +1,45 @@
+/* style create */
+.form-login {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.form-flex {
+    display: block;
+
+}
+
+.form-login__input-size {
+
+}
+
+.form-login__input {
+    margin-top: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px 10px;
+    border: solid 1px var(--color-shop);
+}
+
+.form-login__btn-size {
+
+}
+
+.form-login__btn-style {
+    padding: 5px 10px;
+    background-color: var(--color-shop);
+    border: none;
+    border-radius: 2px;
+    color: var(--text-white);
+    float: right;
+    margin: 0 20px;
+}
+
+.header-menu_product-link {
+    text-decoration: none !important;
+}
+
+.product-link_style {
+    color: var(--text-white);
+}

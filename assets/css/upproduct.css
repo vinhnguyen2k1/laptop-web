@@ -1,0 +1,48 @@
+/* upproduct */
+#manufacturer {
+    padding: 5px;
+}
+.table-upprd {
+    width: 100%;
+}
+.table-upprd__list {
+
+}
+.table-upprd__item {
+    padding: 10px 10px;
+    font-size: 16px;
+    width: 30%;
+}
+.upprd-input {
+    width: 100%;
+    padding: 5px;
+}
+.upprd-input__Review {
+    height: 50px;
+}
+.form-upload {
+    padding: 20px;
+}
+.legend-upload {
+    font-size: 15px;
+    padding: 0 10px;
+}
+.upprd-submit {
+    margin-top: 20px;
+    padding: 5px;
+    width: 150px;
+}
+.fieldset-upload {
+    margin-bottom: 30px;
+}
+.upload_form-table {
+    margin: 20px;
+}
+.upload_form-td {
+    padding: 10px;
+}
+.upprd-input__nameProd {
+    width:100%;
+    height:100px;
+    padding: 10px;
+}

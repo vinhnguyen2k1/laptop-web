@@ -1,0 +1,92 @@
+.div-in4mAlo {
+    margin-top: 20px;
+    display: flex;
+}
+.in4mAlo {
+    font-size: 18px;
+    margin: auto;
+}
+
+
+
+
+/* css có bên listproduct */
+.produc-php__hover-header {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--color-shop);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      color: black;
+   }
+
+   .produc-php__hover-text {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+      color: black;
+   }
+
+   .produc-php__colums-btn {
+      color: white;
+      background-color: var(--color-shop);
+      padding: 5px 10px;
+      border-radius: 5px;
+
+   }
+   .produc-php__colums-btn:hover .produc-php__hover{
+      display: flex;
+      flex-direction: column;
+   }
+   .produc-php__hover {
+      border-radius: 10px;
+      position: fixed;
+      top: 280px;
+      left: 400px;
+      right: 400px;
+      bottom: 280px;
+      min-height: 200px;
+      display: none;
+      background-color: var(--white-color);
+      box-shadow: 0px 2px 2px 2px var(--color-shop);
+      z-index: 2;
+   }
+   .prd-php__cl {
+      text-align: left;
+   }
+   .prd-php__cl-header{
+      font-size: 15px;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+   }
+
+   .list-produc-php {
+      width: 100%;
+      display: flex;
+      background-color: #ccc;
+   }
+   .produc-php__colums {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-bottom: 1px solid var(--color-shop);
+      /* hay width k có bên list */
+      width: 12.5%;
+      min-width: 12.5%;
+      /*  */
+      max-height: 100%;
+      overflow: hidden scroll;
+      padding: 10px 2px;
+      background-color: white;
+   }
+   .produc-php__colums::-webkit-scrollbar {
+      display: none;
+   }
+   .produc-php__colums-img {
+      width: 100%;
+   }

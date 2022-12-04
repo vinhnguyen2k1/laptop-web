@@ -1,0 +1,60 @@
+
+    :root {
+        --white-color: #fff;
+        --text-white: #fff;
+        --black-color: #000;
+        --text-color: rgb(89, 88, 88);
+        --color-shop: #2b80dd;
+        --clshop-hover: #115fb4;
+        --hover-text: rgb(226, 107, 51);
+        --hover-box: #ededed;
+        --color-red: #FF1616;
+    }
+
+    * {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 62.5%;
+        line-height: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+    }
+
+    .grid {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .list-tyle-none {
+        list-style: none;
+    }
+
+    @keyframes showAnimationNotifi {
+        from {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes showAnimationOpacity {
+        from {
+
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+
+        }
+    }
+
