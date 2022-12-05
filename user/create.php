@@ -33,8 +33,13 @@
             $errorRePassword = '* mật khẩu không giống nhau.';  
             } else {
                 if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST['password'])) {
-                    $result = mysqli_query($con, "INSERT INTO `user` (`idUser`, `username`, `password`, `status`, `creat_date`) VALUES (NULL, '" . $_POST['username'] . "', '" . $_POST['password'] . "', 'user', " . time() . ");");
+                    $result = mysqli_query($con, "INSERT INTO `user` (`idUser`, `username`, `password`, `status`, `creat_date`) VALUES (NULL, '" . $_POST['username'] . "', MD5('" . $_POST['password'] . "'), 'user', " . time() . ");");
                     // for data user
+                    if (!$result) {
+                        if (strpos(mysqli_error($con), "Duplicate entry") !== FALSE) {
+                            $error = "* Tài khoản đã tồn tại.";
+                        }
+                    }else{
                     $addi4 = mysqli_query($con,"SELECT * FROM `user`");
                     while($row = mysqli_fetch_array($addi4)){
                         if($row['username'] == $_POST['username']){
@@ -42,14 +47,11 @@
                             mysqli_query($con, "INSERT INTO `i4user` (`idI4`, `idUser`, `email`, `fullname`, `address`, `phone`, `sex`) VALUES (NULL, '".$row['idUser']."', '', '', '', '', '');");
                         }
                     }
+                }
 
                 }
 
-                if (!$result) {
-                    if (strpos(mysqli_error($con), "Duplicate entry") !== FALSE) {
-                        $error = "* Tài khoản đã tồn tại.";
-                    }
-                }
+                
             }
         }
         mysqli_close($con);
