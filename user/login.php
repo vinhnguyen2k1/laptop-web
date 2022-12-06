@@ -51,7 +51,6 @@
                             value="">
                     </div>
                     <div class="form-login__input-size">
-
                         <input type="password" placeholder="Password" name="password" required=""
                             class="form-login__input" value="">
                     </div>
@@ -59,6 +58,9 @@
                         <input class="form-login__btn-style" type="submit" value="Đăng nhập">
                     </div>
                 </form>
+                <div class="form-hide__checkbox">
+                    <input type="checkbox" class="form-hide-password"> Ẩn/Hiện Mật khẩu
+                </div>
                 <div class="clear"></div>
                 <label class="form-login__Blank">bạn chưa có tài khoản? <a href="../user/create.php"
                         class="form-login__Blank-a">Đăng ký</a></label>
@@ -102,6 +104,9 @@
                         <input class="form-login__btn-style" type="submit" value="Đăng nhập">
                     </div>
                 </form>
+                <div class="form-hide__checkbox">
+                    <input type="checkbox" class="form-hide-password"> Ẩn/Hiện Mật khẩu
+                </div>
                 <div class="clear"></div>
                 <label class="form-login__Blank">bạn chưa có tài khoản? <a href="../user/create.php"
                         class="form-login__Blank-a">Đăng ký</a></label>
@@ -116,5 +121,13 @@
     unset($_SESSION['ok_creat']);
     ?>
 </body>
-
+<script>
+   document.querySelector('.form-hide-password').onclick = () => {
+        if(document.querySelector('.form-hide-password').checked) {
+            document.querySelector('input[name=password]').type = 'text';
+        }else {
+            document.querySelector('input[name=password]').type = 'password';
+        }
+   }
+</script>
 </html>
