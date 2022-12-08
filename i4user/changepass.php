@@ -8,12 +8,13 @@
         if(!empty($_POST)){
             if($_POST['password'] !== $_POST['repassword'])
             $error = "* Kiểm tra mật khẩu không giống nhau";
-           
+            if(strlen($_POST['password']) < 7)
+            $error = "* Mật khẩu mới quá ngắn";
             if($error == false)
             while($row = mysqli_fetch_array($result)){
                 if($row['idUser'] == $_SESSION['current_user']['idUser'])
                 $green = "Thay đổi mật khẩu thành công!";
-                mysqli_query($con,"UPDATE `user` SET `password` = '".$_POST['password']."' WHERE `user`.`idUser` = ".$_SESSION['current_user']['idUser']." AND `user`.`username` = '".$_SESSION['current_user']['username']."';");
+                mysqli_query($con,"UPDATE `user` SET `password` = MD5('".$_POST['password']."') WHERE `user`.`idUser` = ".$_SESSION['current_user']['idUser']." AND `user`.`username` = '".$_SESSION['current_user']['username']."';");
             }
         }
     }
